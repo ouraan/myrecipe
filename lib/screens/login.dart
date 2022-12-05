@@ -158,8 +158,8 @@ class _LoginState extends State<Login> {
                       onPressed: (() => setState(
                           () => isPasswordVisible = !isPasswordVisible)),
                       icon: isPasswordVisible
-                          ? Icon(Icons.visibility_off)
-                          : Icon(Icons.visibility)),
+                          ? Icon(Icons.visibility)
+                          : Icon(Icons.visibility_off)),
                 ),
                 obscureText: isPasswordVisible,
                 validator: (value) {

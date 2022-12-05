@@ -22,7 +22,7 @@ class Landing extends StatelessWidget {
                     height: 21, fit: BoxFit.cover),
                 SizedBox(width: 10),
                 Text(
-                  "Cookuy",
+                  "My Recipe",
                   style: TextStyle(
                       fontFamily: 'OpenSans-Bold',
                       color: semiBlack,

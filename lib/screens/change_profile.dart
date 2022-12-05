@@ -13,6 +13,8 @@ class ChangeProfile extends StatefulWidget {
 }
 
 class _ChangeProfileState extends State<ChangeProfile> {
+  bool isPasswordVisible = false;
+
   TextEditingController controllerName = TextEditingController();
   TextEditingController controllerEmail = TextEditingController();
   TextEditingController controllerPass = TextEditingController();
@@ -202,8 +204,14 @@ class _ChangeProfileState extends State<ChangeProfile> {
                               fontFamily: 'OpenSans-Light',
                               color: lightGrey,
                               fontSize: 16),
+                          suffixIcon: IconButton(
+                              onPressed: (() => setState(() =>
+                                  isPasswordVisible = !isPasswordVisible)),
+                              icon: isPasswordVisible
+                                  ? Icon(Icons.visibility)
+                                  : Icon(Icons.visibility_off)),
                         ),
-                        obscureText: true,
+                        obscureText: isPasswordVisible,
                       ),
                       SizedBox(height: 20),
                       Text(
@@ -230,8 +238,14 @@ class _ChangeProfileState extends State<ChangeProfile> {
                               fontFamily: 'OpenSans-Light',
                               color: lightGrey,
                               fontSize: 16),
+                          suffixIcon: IconButton(
+                              onPressed: (() => setState(() =>
+                                  isPasswordVisible = !isPasswordVisible)),
+                              icon: isPasswordVisible
+                                  ? Icon(Icons.visibility)
+                                  : Icon(Icons.visibility_off)),
                         ),
-                        obscureText: true,
+                        obscureText: isPasswordVisible,
                         validator: (value) {
                           if (value != controllerPass.text) {
                             return 'Password enter the same password';

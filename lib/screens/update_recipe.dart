@@ -60,6 +60,7 @@ class _UpdateRecipeState extends State<UpdateRecipe> {
           });
       if (response.data.length > 0) {
         print("Recipe changed successfully");
+        Navigator.pop(context);
       } else {
         print("Failed");
       }

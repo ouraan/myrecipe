@@ -126,6 +126,8 @@ class _MyRecipeState extends State<MyRecipe> {
                                     MainAxisAlignment.spaceBetween,
                                 children: [
                                   Column(
+                                    crossAxisAlignment:
+                                        CrossAxisAlignment.start,
                                     children: [
                                       Text(
                                         "${snapshot.data?[index].title}",

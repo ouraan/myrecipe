@@ -50,6 +50,7 @@ class _AddRecipeState extends State<AddRecipe> {
       });
       if (response.data.length > 0) {
         print("Recipe added successfully");
+        Navigator.pop(context);
       } else {
         print("Failed");
       }

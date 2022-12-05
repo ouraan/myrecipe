@@ -40,7 +40,7 @@ class _SplashState extends State<Splash> {
             ),
             SizedBox(height: 12),
             Text(
-              "Cookuy",
+              "My Recipe",
               style: TextStyle(
                   fontFamily: 'OpenSans-Bold', color: white, fontSize: 21),
             ),
